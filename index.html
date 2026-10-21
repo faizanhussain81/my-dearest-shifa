@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little World Just for You</title>
+<style>
+:root {
+ --site-primary:#ef7198; --site-secondary:#ffe2eb; --site-background:#fff6f8;
+ --site-on-primary:#ffffff; --site-on-secondary:#78354b; --site-on-background:#613747;
+ --site-font-body: ui-rounded, "Trebuchet MS", system-ui, sans-serif;
+ --site-font-heading: Georgia, "Times New Roman", serif;
+ --site-heading-scale:1; --site-spacing-scale:1; --site-radius-scale:1;
+ --site-decoration-opacity:1;
+}
+*{box-sizing:border-box} body{margin:0;font-family:var(--site-font-body);color:#fff0f5;background:#2a1020}
+#app{min-height:100vh;width:100%;border-radius:0;background:radial-gradient(circle at 50% 30%,#4b263c 0%,#321628 62%,#260f1e 100%);color:#fff0f5;position:relative;overflow:hidden;isolation:isolate}
+.decor{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:var(--site-decoration-opacity);z-index:-1}
+.float{position:absolute;bottom:-50px;animation:rise linear infinite;opacity:.6;font-size:clamp(18px,3vw,32px)}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{width:min(1100px,100%);margin:auto;padding:clamp(22px,4vw,44px) 18px 40px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:#f1c98b;font-weight:800}
+h1,h2{font-family:var(--site-font-heading);font-weight:500;line-height:1.12}h1{font-size:clamp(2.7rem,8vw,5.8rem);margin:.4em 0 .25em;letter-spacing:-.04em}h2{font-size:clamp(2rem,5vw,3.3rem);margin:.2em 0 .4em}
+p{line-height:1.75}.center{text-align:center}.muted{opacity:.78}.panel{background:light-dark(#ffffffd9,#382634);border:1px solid light-dark(#f5cad8,#694353);border-radius:calc(26px * var(--site-radius-scale));padding:clamp(20px,4vw,38px);box-shadow:0 18px 55px #8b3e5712}
+button,input{font:inherit}button{cursor:pointer;border:0;border-radius:999px;padding:13px 22px;background:var(--site-primary);color:var(--site-on-primary);font-weight:800;box-shadow:0 8px 20px #e46b901f;transition:transform .2s,filter .2s}button:hover{transform:translateY(-2px);filter:saturate(1.1)}button:focus-visible,input:focus-visible{outline:3px solid #a94a6b;outline-offset:3px}.secondary{background:var(--site-secondary);color:var(--site-on-secondary)}input{width:min(100%,330px);padding:14px 16px;border-radius:14px;border:1px solid #eab9c9;background:light-dark(#fff,#2b1c27);color:inherit;margin:8px 0 14px;text-align:center}.hidden{display:none!important}.seal{font-size:4rem;animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.08)}}
+.hero{padding:30px 0 44px}.subtitle{font-size:1.1rem;max-width:650px;margin:0 auto 24px}.sparkle{color:#f0b6ca}.section{margin-top:38px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.memory{border-radius:20px;min-height:0;background:linear-gradient(145deg,#ffe5ed,#fff7f9);border:1px solid #e5a7bc;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:14px;text-align:center;color:#8a435b;overflow:hidden}.memory .icon{font-size:2.5rem}.memory img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;object-position:center;border-radius:14px;flex:0 0 auto;background:#fff7f9}.memory strong{margin-top:12px;line-height:1.35}.note{background:#fff0f5;color:#713c50;border-radius:18px;padding:22px;line-height:1.9;white-space:pre-line}.reason{background:light-dark(#fff,#382634);border:1px solid #f0c5d3;border-radius:18px;padding:20px;text-align:center;min-height:125px}.reason button{margin-top:10px;padding:9px 15px}.songbox{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap}.vinyl{height:95px;width:95px;border-radius:50%;background:repeating-radial-gradient(circle,#3f2532 0 3px,#5d3547 4px 6px);display:grid;place-items:center;color:white;font-size:2rem;animation:spin 9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}footer{text-align:center;padding:28px 0 10px;opacity:.78;font-size:.9rem}.toast{min-height:24px;color:#ffc1d5;font-size:.9rem}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.songbox{flex-direction:column}}
+</style>
+</head>
+<body><div id="app"><div class="decor" id="decor" aria-hidden="true"></div>
+<main>
+<section id="gate" class="center hero" style="margin-top:0;padding:clamp(34px,5vw,68px) 22px 48px;background:#ffffff12;border:1px solid #ffffff35;border-radius:28px;box-shadow:0 24px 80px #12071133">
+<div style="font-size:2rem;letter-spacing:.3em;margin-bottom:4px">♡ 💗 ♡</div><div class="eyebrow">a tiny secret, just for you</div>
+<h1 style="font-size:clamp(3.3rem,8vw,5.8rem);margin:.24em 0 .2em">A little surprise<br><span class="sparkle" style="font-style:italic">for Shifa</span> <span style="font-style:normal">❤️</span></h1>
+<p class="subtitle">Someone made a little world just to remind you how loved you are.</p>
+<p style="margin:28px auto 22px">Enter your secret password to open your surprise 💌</p>
+<div style="max-width:480px;margin:auto"><form id="passwordForm"><input id="password" type="password" placeholder="Your secret password" aria-label="Secret password" autocomplete="off" style="width:min(100%,320px);border-radius:999px;background:#fff9fb;color:#422337;padding:15px 18px"><br><button type="submit" style="background:linear-gradient(110deg,#ffe0eb,#f4b6cd);color:#54273d;font-weight:500;padding:15px 25px">Open my surprise 💗</button></form><div id="gateMsg" class="toast" aria-live="polite"></div></div>
+<p style="font-size:.9rem;margin-top:42px;opacity:.85">A little reminder: you are someone's favourite person. ♡</p>
+</section>
+<section id="inside" class="hidden">
+<header class="center hero"><div class="eyebrow">just for you</div><h1>My dearest <span id="herName">Shifa Seeham Khan</span> <span class="sparkle">♡</span></h1><p class="subtitle">If I could wrap up the way you make me feel and give it to you, it might look a little like this.</p><button id="heartBurst">Tap for a little magic ✨</button></header>
+<section class="section panel center"><div class="eyebrow">a note from my heart</div><h2>If you ever wonder what you mean to me, read this.</h2><div class="note" id="loveNote">You are one of the loveliest parts of my world. I hope you never forget how special you are to me—not just on the beautiful days, but on the ordinary ones too. I choose you in the little moments, in the big dreams, and in all the tomorrows we haven't met yet. If this little surprise makes you smile even half as much as you make me smile, then it's already perfect. ❤️
+
+I wanted to make you something a little different—a small surprise you could open and keep as a reminder of how special you are to me. Your smile, your kindness, and the little things that make you you mean more to me than I can fit into a webpage. I feel lucky to have you in my life, and I look forward to all the memories we still have to make together.
+
+Whenever life feels busy or difficult, I hope you remember this: you are appreciated, you are cherished, and you never have to wonder whether you matter to me. You do. So much. ❤️
+
+I want to see you succeed in every dream you carry in your heart. I hope I get to stand beside you as you work toward them, cheer you on when things feel difficult, and celebrate every achievement—big or small—with you. Your dreams matter to me, and I will always be proud to see you grow into everything you hope to become.
+
+And through every season of life—the easy days, the uncertain ones, the changes, the challenges, and the beautiful new beginnings—I want to be there with you. Not only to celebrate your happiest moments, but to support you when life feels heavy, remind you of your strength, and keep choosing you along the way. ❤️
+
+Always choosing you,
+Your favourite person 💗</div></section>
+<section class="section"><div class="center"><div class="eyebrow">little snapshots of you</div><h2>Some of my favourite views in the world</h2><p class="muted">A few moments of the girl who makes my world brighter. ♡</p><p class="muted" style="font-size:.82rem">Before publishing, place your chosen photos in the repository's <code>images</code> folder and update the filenames in CONFIG below.</p></div><div class="grid" id="photos">
+<div class="memory"><div class="icon">📷</div><strong>Our favourite photo</strong><span class="muted">Add a picture of her here</span></div>
+<div class="memory"><div class="icon">🌷</div><strong>That beautiful smile</strong><span class="muted">A moment you adore</span></div>
+<div class="memory"><div class="icon">💞</div><strong>A memory to keep</strong><span class="muted">One for the scrapbook</span></div>
+</div></section>
+<section class="section panel center"><div class="eyebrow">a melody just for you</div><h2>Our little soundtrack 🎶</h2><div class="songbox"><div class="vinyl">♥</div><div><p style="margin-bottom:4px"><strong id="songTitle">Om Shanti Om — Piano</strong></p><p class="muted" style="margin-top:0">A little melody to make you think of us. ♡</p><p id="songHint" class="muted" style="font-size:.9rem">Our song will try to play when you unlock the surprise.</p><audio id="backgroundMusic" preload="auto" loop controls style="width:min(320px,100%);margin-top:10px"></audio></div></div></section>
+<section class="section"><div class="center"><div class="eyebrow">tiny hearts, big reasons</div><h2>Open a little heart</h2><p class="muted">Tap each one. I hid a few reminders for you.</p></div><div class="grid">
+<div class="reason"><div style="font-size:2rem">💗</div><button class="secondary reveal" data-message="Your smile can turn an ordinary day into my favourite one.">Open this heart</button></div>
+<div class="reason"><div style="font-size:2rem">🌸</div><button class="secondary reveal" data-message="You deserve to feel loved, chosen, respected, and cherished—every single day.">Open this heart</button></div>
+<div class="reason"><div style="font-size:2rem">✨</div><button class="secondary reveal" data-message="My favourite future is the one where I get to keep making memories with you.">Open this heart</button></div>
+</div><div id="reasonMsg" class="note center hidden" style="margin-top:15px" aria-live="polite"></div></section>
+<section class="section panel center"><div class="seal">🎁</div><div class="eyebrow">one last thing</div><h2>Before you go…</h2><p class="subtitle">There's something I want you to remember, always.</p><button id="finalButton">Open your last surprise 💌</button><div id="finalMessage" class="hidden" style="margin-top:24px"><div style="font-size:3rem">💖</div><h2 style="font-size:2.2rem">You are so loved.</h2><p class="subtitle">No website could ever hold all the love I have for you. This is just a little reminder that you are precious to me, and I feel lucky that our paths found each other. Here's to our story—and all the beautiful chapters still waiting for us. Forever on your team. ❤️</p><div style="font-size:2.2rem">🌷 🧸 💗 🌙</div></div></section>
+<footer>Handmade just for you. <span class="sparkle">♡</span></footer>
+</section></main></div>
+<script>
+// PERSONALIZE THESE VALUES before sharing the page. Put image files in an /images folder and list their paths below.
+const CONFIG={name:'Shifa Seeham Khan',password:'Sf@123',songTitle:'Om Shanti Om — Piano',photos:[{src:'images/shifa-1.jpg',caption:'My favourite smile ♡'},{src:'images/shifa-2.jpg',caption:'Beautiful you ✨'},{src:'images/shifa-3.jpg',caption:'A memory to treasure 💗'},{src:'images/shifa-4.jpg',caption:'A moment I adore 🌷'},{src:'images/shifa-5.jpg',caption:'One for our memories 💞'},{src:'images/shifa-6.jpg',caption:'Always you ✨'}]};
+document.getElementById('herName').textContent=CONFIG.name;
+document.getElementById('songTitle').textContent=CONFIG.songTitle;
+const backgroundMusic=document.getElementById('backgroundMusic');
+// Put om_shanti_om_piano.mp3 in the same folder as this HTML file.
+backgroundMusic.src='om_shanti_om_piano.mp3';
+const photoGallery=document.getElementById('photos');
+if(CONFIG.photos.length){photoGallery.innerHTML='';CONFIG.photos.forEach(photo=>{const card=document.createElement('div');card.className='memory';const img=document.createElement('img');img.src=photo.src;img.alt='A favourite photo of Shifa';img.loading='lazy';img.onerror=()=>{img.style.display='none';const fallback=document.createElement('span');fallback.textContent='Add '+photo.src+' to your GitHub repository';card.appendChild(fallback)};const caption=document.createElement('strong');caption.textContent=photo.caption;card.append(img,caption);photoGallery.appendChild(card)})}
+const decor=document.getElementById('decor');
+for(let i=0;i<24;i++){const s=document.createElement('span');s.className='float';s.textContent=['♡','♥','✿','✨'][i%4];s.style.left=(Math.random()*100)+'%';s.style.animationDuration=(9+Math.random()*13)+'s';s.style.animationDelay=(-Math.random()*20)+'s';s.style.fontSize=(16+Math.random()*22)+'px';decor.appendChild(s)}
+document.getElementById('passwordForm').addEventListener('submit',e=>{e.preventDefault();const entered=document.getElementById('password').value;if(entered.trim()===CONFIG.password){document.getElementById('gate').classList.add('hidden');document.getElementById('inside').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});burst(22);backgroundMusic.play().then(()=>{document.getElementById('songHint').textContent='Music is playing softly for you. ♡'}).catch(()=>{document.getElementById('songHint').textContent='Tap play below to start the romantic music. Your browser blocked automatic playback.'})}else{document.getElementById('gateMsg').textContent='Not quite, sweetheart… try our secret word again 💗';document.getElementById('password').value='';}});
+function burst(n=16){for(let i=0;i<n;i++){const h=document.createElement('span');h.textContent=['💗','💖','💕','✨','🌸'][Math.floor(Math.random()*5)];h.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:${30+Math.random()*60}vh;font-size:${18+Math.random()*24}px;pointer-events:none;z-index:20;animation:pop 2.4s ease-out forwards`;document.body.appendChild(h);setTimeout(()=>h.remove(),2500)}}
+const style=document.createElement('style');style.textContent='@keyframes pop{0%{transform:translateY(0) scale(.5);opacity:0}15%{opacity:1}100%{transform:translateY(-180px) rotate(25deg) scale(1.4);opacity:0}}';document.head.appendChild(style);
+document.getElementById('heartBurst').addEventListener('click',()=>burst(28));
+document.querySelectorAll('.reveal').forEach(b=>b.addEventListener('click',()=>{const box=document.getElementById('reasonMsg');box.textContent=b.dataset.message;box.classList.remove('hidden');burst(5)}));
+document.getElementById('finalButton').addEventListener('click',()=>{document.getElementById('finalMessage').classList.remove('hidden');document.getElementById('finalButton').classList.add('hidden');burst(40)});
+</script>
+</body></html>
